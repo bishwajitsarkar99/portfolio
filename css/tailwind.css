@@ -1,0 +1,75 @@
+/* @import "tailwindcss"; */
+body{
+    color: #212529;
+    background-color: #f2f2f3;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: var(--font-family);
+}
+select{
+    box-shadow: none;
+    outline: none;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: var(--font-family);
+    border-radius: 3px;
+}
+option{
+    font-size: 14px;
+    font-weight: 600;
+}
+#search{
+    outline: none;
+    box-shadow: none;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: var(--font-family);
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    padding: 6px 8px;
+}
+button#searchBtn{
+    font-size: 14px;
+    font-weight: 700;
+    height: 26px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    line-height: .3;
+}
+/* caret thickness */
+.input-wrapper {
+    position: relative;
+    display: inline-block;
+    /* width: 100%; */
+}
+/* Fake caret */
+.fake-caret {
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 1.3em;
+    background: -webkit-gradient(linear, 0% 100%, 0% 0%, from(rgb(12 152 157)), to(rgb(82 197 255)));
+    animation: blink 1s step-end infinite;
+    pointer-events: none;
+    margin-top: 1px;
+}
+@keyframes blink {
+    50% { opacity: 0; }
+}
+.nav-bg{
+    --bg-dark-200: linear-gradient(45deg, #1e1e1ed9, #1e1e1ed9);
+    background-image: var(--bg-dark-200);
+}
+.avtara {
+    border-radius: 50%;
+    box-shadow: 0 2px 20px #0001, 0 1px 6px #0001;
+    animation: zoom-out 3s linear infinite;
+}
+@keyframes zoom-out {
+    100% {
+        width: 100%;
+    }
+}
