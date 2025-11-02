@@ -1,8 +1,8 @@
 export const ServicesData = [
     {
-    url: './images/ecommerce.png',
-    title: 'E-Commerce',
-    body: 'Industrial Equipment E-Commerce Website.'
+        url: './images/ecommerce.png',
+        title: 'E-Commerce',
+        body: 'Industrial Equipment E-Commerce Website.'
     },
     {
         url: './images/animal.png',
