@@ -1,7 +1,7 @@
 {
-  "name": "Supplier Management",
-  "short_name": "SupplierApp",
-  "description": "A simple Supplier Management dashboard app.",
+  "name": "Protfolio",
+  "short_name": "ProtfolioApp",
+  "description": "A simple Protfolio page.",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#ffffff",
