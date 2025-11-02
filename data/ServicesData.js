@@ -1,6 +1,6 @@
 export const ServicesData = [
     {
-        url: './images/ecommerce.png',
+        url: './images/fornend.jpg',
         title: 'E-Commerce',
         body: 'Industrial Equipment E-Commerce Website.'
     },
