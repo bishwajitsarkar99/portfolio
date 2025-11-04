@@ -5,7 +5,7 @@ export const ServicesData = [
         body: 'Industrial Equipment E-Commerce Website.'
     },
     {
-        url: ' https://bishwajitsarkar99.github.io/portfolio/images/animal.png',
+        url: 'https://bishwajitsarkar99.github.io/portfolio/images/animal.png',
         title: 'Animal E-Commerce',
         body: 'Veterinary Medicine and Farming Equipment Website.'
     },
@@ -20,7 +20,7 @@ export const ServicesData = [
         body: 'Backend for Medicine E-Commerce Platform.'
     },
     {
-        url: ' https://bishwajitsarkar99.github.io/portfolio/images/supplier.png',
+        url: 'https://bishwajitsarkar99.github.io/portfolio/images/supplier.png',
         title: 'Supplier Management',
         body: 'Backend for Supplier Management System.'
     }
