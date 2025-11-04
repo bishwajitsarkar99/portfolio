@@ -1613,6 +1613,7 @@
         initRectangleSolidator();
         initPolygonSolidator();
         initSubLineConnector();
+        initImageSlider(ServicesData);
         
         $(window).on('scroll', function() {
             let scrollPos = $(window).scrollTop();
@@ -1639,7 +1640,7 @@
                 }
             });
         });
-        initImageSlider(ServicesData);
+        
         //customCursor('.input_cursor', '.fake-caret');
         // Solidator Text
         const words = ['Language', 'Framework', 'Tools', 'Library', 'Database'];
