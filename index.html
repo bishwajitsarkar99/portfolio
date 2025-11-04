@@ -1600,7 +1600,6 @@
             //customCursor
         } from "./design-module.min.js";
         import { ServicesData } from './data/ServicesData.js';
-        initImageSlider(ServicesData);
 
         // Apply effect to all images with `.weave-img` class 
         hoverWeaveEffect('.weave-img', 25, 0.3);
@@ -1651,6 +1650,7 @@
             index = (index + 1) % words.length;
         }, 12000);
         //clearInterval(timer);
+        initImageSlider(ServicesData);
     </script>
 </body>
 
