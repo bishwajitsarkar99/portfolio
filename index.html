@@ -1600,7 +1600,7 @@
             //customCursor
         } from "./design-module.min.js";
         import { ServicesData } from './data/ServicesData.js';
-
+        initImageSlider(ServicesData);
         // Apply effect to all images with `.weave-img` class 
         hoverWeaveEffect('.weave-img', 25, 0.3);
         initMouseMarbleEffect('.hero-section', 'marble-cursor-one', 'img');
@@ -1613,7 +1613,7 @@
         initRectangleSolidator();
         initPolygonSolidator();
         initSubLineConnector();
-        initImageSlider(ServicesData);
+        
         
         $(window).on('scroll', function() {
             let scrollPos = $(window).scrollTop();
