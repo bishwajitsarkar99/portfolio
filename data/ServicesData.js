@@ -10,7 +10,7 @@ export const ServicesData = [
         body: 'Veterinary Medicine and Farming Equipment Website.'
     },
     {
-        url: './images/animal-medicine.png https://bishwajitsarkar99.github.io/portfolio/images/animal-medicine.png',
+        url: 'https://bishwajitsarkar99.github.io/portfolio/images/animal-medicine.png',
         title: 'Animal Medicine',
         body: 'Backend for Animal Medicine Management.'
     },
