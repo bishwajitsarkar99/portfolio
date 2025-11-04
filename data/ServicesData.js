@@ -15,7 +15,7 @@ export const ServicesData = [
         body: 'Backend for Animal Medicine Management.'
     },
     {
-        url: './images/animal-backend.png',
+        url: './assets/images/animal-backend.png',
         title: 'Medicine E-Commerce',
         body: 'Backend for Medicine E-Commerce Platform.'
     },
