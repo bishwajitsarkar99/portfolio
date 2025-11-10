@@ -1030,7 +1030,7 @@
             </div>
             <div class="container mb-20">
                 <div class="flex size-full justify-center items-center">
-                    <div class="block h-148 overflow-hidden rounded-2xl ring ring-gray-950/5 max-sm:h-100 dark:bg-gray-950 dark:ring-white/10">
+                    <div class="project-slider relative block h-148 overflow-hidden rounded-2xl ring ring-gray-950/5 max-sm:h-100 dark:bg-gray-950 dark:ring-white/10">
                         <div class="size-430 shrink-0 scale-50 md:scale-75 lg:scale-100 dark:bg-white/5">
                             <div class="relative top-(--top,5%) right-(--right,54%) grid size-full origin-top-left rotate-x-55 rotate-y-0 -rotate-z-45 grid-cols-4 gap-8 transform-3d">
                                 <div class="flex flex-col gap-8 scroll-first-item-container" style="transform:translateY(750px);">
@@ -1064,6 +1064,7 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="marble-cursor bg-radial-[at_50%_75%] transition-all duration-300 ease-out" id="marble-cursor-seven"></div>
                     </div>
                 </div>
             </div>
@@ -1215,18 +1216,18 @@
                         <div class="sub__slider h-48">
                             <div class="left-doted-skeletone">
                                 <div class="sub-scroll-slider-container transform-3d">
-                                    <img class="weave-img" src="./images/animal-backend.png" alt="Bottom Slide 1">
-                                    <img class="weave-img" src="./images/animal-medicine.png" alt="Bottom Slide 2">
-                                    <img class="weave-img" src="./images/ecommerce.png" alt="Bottom Slide 3">
-                                    <img class="weave-img" src="./images/animal-temp.png" alt="Bottom Slide 4">
-                                    <img class="weave-img" src="./images/supplier.png" alt="Bottom Slide 5">
+                                    <img src="./images/animal-backend.png" alt="Bottom Slide 1">
+                                    <img src="./images/animal-medicine.png" alt="Bottom Slide 2">
+                                    <img src="./images/ecommerce.png" alt="Bottom Slide 3">
+                                    <img src="./images/animal-temp.png" alt="Bottom Slide 4">
+                                    <img src="./images/supplier.png" alt="Bottom Slide 5">
         
                                     <!-- Duplicate images for seamless loop -->
-                                    <img class="weave-img" src="./images/animal-backend.png" alt="Bottom Slide 1">
-                                    <img class="weave-img" src="./images/animal-medicine.png" alt="Bottom Slide 2">
-                                    <img class="weave-img" src="./images/ecommerce.png" alt="Bottom Slide 3">
-                                    <img class="weave-img" src="./images/animal-temp.png" alt="Bottom Slide 4">
-                                    <img class="weave-img" src="./images/supplier.png" alt="Bottom Slide 5">
+                                    <img src="./images/animal-backend.png" alt="Bottom Slide 1">
+                                    <img src="./images/animal-medicine.png" alt="Bottom Slide 2">
+                                    <img src="./images/ecommerce.png" alt="Bottom Slide 3">
+                                    <img src="./images/animal-temp.png" alt="Bottom Slide 4">
+                                    <img src="./images/supplier.png" alt="Bottom Slide 5">
                                 </div>
                             </div>
                         </div>
@@ -1580,6 +1581,7 @@
         initMouseMarbleEffect('.about', 'marble-cursor-three', 'img');
         initMouseMarbleEffect('.service', 'marble-cursor-four', 'img');
         initMouseMarbleEffect('.project', 'marble-cursor-five', 'img');
+        initMouseMarbleEffect('.project-slider', 'marble-cursor-seven', 'img');
         initMouseMarbleEffect('.hero-sub-heading', 'marble-cursor-six', 'img');
         // buttonBorderAnimation('.connectorPath', '.border-box', 'active-class');
         // initRectangleSolidator();
