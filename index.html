@@ -560,7 +560,7 @@
             </div>
             <div class="marble-cursor bg-radial-[at_50%_75%] transition-all duration-300 ease-out" id="marble-cursor-six"></div>
         </section>
-        <section class="mx-3 mb-50 my-10" id="skills">
+        <section class="mx-3 mb-100 my-10" id="skills">
             <div class="grid grid-col-2 sm:grid-flow-col lg:grid-flow-col md:grid-flow-row gap-8 align-middle">
                 <div class="card w-full sm:p-0 md:p-0 lg:p-0 shadow-sm dark:bg-gray-800 dark:border-gray-700 bg-[linear-gradient(to_right,#80808055_1px,transparent_1px),linear-gradient(to_bottom,#80808055_1px,transparent_1px)] bg-[size:40px_40px] mask-size-[50%]">
                     <div class="relative group border-t-1 border-t-white border-b-1 border-b-neutral-100 border-l-1 border-l-white border-r-1 border-r-neutral-100 z-10 bg-[linear-gradient(to_right,#80808020_1px,transparent_1px),linear-gradient(to_bottom,#80808020_1px,transparent_1px)] bg-[size:4px_4px] mask-size-[50%] bg-blend-lighten [mask-image:radial-gradient(ellipse_130%_130%_at_20%_20%,#000_80%,transparent_100%)]">
@@ -772,6 +772,149 @@
                     </div>
                 </div>
             </div>
+            <div class="w-full h-[0px]">
+                <div class="grid grid-col-2 pt-10 sm:grid-flow-col lg:grid-flow-col md:grid-flow-row gap-8 align-middle">
+                    <div class="container">
+                        <svg id="connectionLayer" class="absolute top-0 left-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="connectorCubeToSolidator">
+                                <path class="connectorLine" fill="none" stroke-width="2"></path>
+                            </g>
+                        </svg>
+                        <svg viewBox="0 0 200 200" width="250" height="250" storkeLinecap="round" strokeLinejoin="round" id="connectorSolidator">
+                            <defs>
+                                <linearGradient id="cube-edge" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#80808058" stop-opacity="0.8"/>
+                                    <stop offset="100%" stop-color="#80808058" stop-opacity="0.8"/>
+                                </linearGradient>
+                            </defs>
+                            <g id="cube" stroke="url(#cube-edge)" stroke-width="1" fill="none">
+                                <polygon id="back" points="60,60 140,60 140,140 60,140"/>
+                                <polygon id="front" points="80,40 160,40 160,120 80,120"/>
+                                <line x1="60" y1="60" x2="80" y2="40"/>
+                                <line x1="140" y1="60" x2="160" y2="40"/>
+                                <line x1="60" y1="140" x2="80" y2="120"/>
+                                <line x1="140" y1="140" x2="160" y2="120"/>
+                            </g>
+                            <foreignObject x="50" y="75" width="100" height="100">
+                                <div id="textCubic"
+                                    contenteditable="false"
+                                    style="
+                                        font-family: 'Orbitron', sans-serif;
+                                        color:#222;
+                                        font-size: 14px;
+                                        text-align: center;
+                                        font-weight: 600;
+                                        outline: none;
+                                        user-select: text;
+                                    ">
+                                    Forntend
+                                </div>
+                            </foreignObject>
+                            <style>
+                                #cube,#textCubic {
+                                    transform-origin: 200px 200px;
+                                    animation: rotate3D 12s linear infinite;
+                                }
+            
+                                @keyframes rotate3D {
+                                    0% {
+                                        transform: rotateX(10deg) rotateY(10deg) scale(0.5);
+                                    }
+                                    25% {
+                                        transform: rotateX(10deg) rotateY(10deg) scale(0.20);
+                                    }
+                                    50% {
+                                        transform: rotateX(20deg) rotateY(25deg) scale(1.03);
+                                    }
+                                    75% {
+                                        transform: rotateX(30deg) rotateY(-35deg) scale(1.1);
+                                    }
+                                    90%{
+                                        transform: rotateX(45deg) rotateY(-90deg) scale(1.05);
+                                    }
+                                    100% {
+                                        transform: rotateX(0deg) rotateY(0deg) scale(1.05);
+                                        transition: all;
+                                    }
+                                }
+                            </style>
+                        </svg>
+                    </div>
+                    <div class="">
+                        <span>
+                            <svg id="connectionPloyLayer" class="absolute top-0 left-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="connectorPolyToSolidator">
+                                    <path class="connectorPolyLine" fill="none" stroke-width="2"></path>
+                                </g>
+                            </svg>
+                            <svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" id="polygonSolidator">
+                                <polygon id="poly" points="
+                                    150,40
+                                    253.923,95
+                                    253.923,205
+                                    150,260
+                                    46.077,205
+                                    46.077,95
+                                    150,260
+                                    46.077,205
+                                    46.077,95
+                                    150,40
+                                    253.923,95
+                                    253.923,205
+                                " fill="none" stroke="#80808058" stroke-width="1"/>
+        
+                                <line id="line" x1="150" y1="40"    x2="150" y2="260" stroke="#80808058" stroke-width="1"/>
+                                <line id="line" x1="253.923" y1="95" x2="46.077" y2="205" stroke="#80808058" stroke-width="1"/>
+                                <line id="line" x1="253.923" y1="205" x2="46.077" y2="95"  stroke="#80808058" stroke-width="1"/>
+                                
+                                <foreignObject x="50" y="75" width="100" height="100">
+                                    <div id="textCubic"
+                                        contenteditable="false"
+                                        style="
+                                            font-family: 'Orbitron', sans-serif;
+                                            color:#222;
+                                            font-size: 18px;
+                                            text-align: center;
+                                            font-weight: 800;
+                                            outline: none;
+                                            user-select: text;
+                                        ">
+                                        Backend
+                                    </div>
+                                </foreignObject>
+                                <style>
+                                    #poly,#line {
+                                        transform-origin: 100px 100px;
+                                        animation: leftrotate3D 12s linear infinite;
+                                    }
+                
+                                    @keyframes leftrotate3D {
+                                        0% {
+                                            transform: rotateX(0deg) rotateY(0deg) scale(0.5);
+                                        }
+                                        25% {
+                                            transform: rotateX(10deg) rotateY(20deg) scale(1.2);
+                                        }
+                                        50% {
+                                            transform: rotateX(20deg) rotateY(30deg) scale(1.4);
+                                        }
+                                        75% {
+                                            transform: rotateX(30deg) rotateY(45deg) scale(0.65);
+                                        }
+                                        90%{
+                                            transform: rotateX(45deg) rotateY(90deg) scale(0.55);
+                                        }
+                                        100% {
+                                            transform: rotateX(0deg) rotateY(360deg) scale(1);
+                                            transition: all;
+                                        }
+                                    }
+                                </style>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            </div>
         </section>
         <!-- Project -->
         <section class="mx-3 mb-30" id="projects">
@@ -792,156 +935,13 @@
                 <div class="flex flex-flow-row gap-8 mb-20">
                     <div class="col-span-8">
                         <div class="heading relative project lg:py-0 rounded-lg justify-evenly items-center">
-                            <div class="w-full h-[0px]">
-                                <div class="grid grid-col-2 pt-30 sm:grid-flow-col lg:grid-flow-col md:grid-flow-row gap-8 align-middle">
-                                    <div class="container">
-                                        <svg id="connectionLayer" class="absolute top-0 left-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
-                                            <g id="connectorCubeToSolidator">
-                                                <path class="connectorLine" fill="none" stroke-width="2"></path>
-                                            </g>
-                                        </svg>
-                                        <svg viewBox="0 0 200 200" width="250" height="250" storkeLinecap="round" strokeLinejoin="round" id="connectorSolidator">
-                                            <defs>
-                                                <linearGradient id="cube-edge" x1="0%" y1="0%" x2="100%" y2="100%">
-                                                    <stop offset="0%" stop-color="#80808058" stop-opacity="0.8"/>
-                                                    <stop offset="100%" stop-color="#80808058" stop-opacity="0.8"/>
-                                                </linearGradient>
-                                            </defs>
-                                            <g id="cube" stroke="url(#cube-edge)" stroke-width="1" fill="none">
-                                                <polygon id="back" points="60,60 140,60 140,140 60,140"/>
-                                                <polygon id="front" points="80,40 160,40 160,120 80,120"/>
-                                                <line x1="60" y1="60" x2="80" y2="40"/>
-                                                <line x1="140" y1="60" x2="160" y2="40"/>
-                                                <line x1="60" y1="140" x2="80" y2="120"/>
-                                                <line x1="140" y1="140" x2="160" y2="120"/>
-                                            </g>
-                                            <foreignObject x="50" y="75" width="100" height="100">
-                                                <div id="textCubic"
-                                                    contenteditable="false"
-                                                    style="
-                                                        font-family: 'Orbitron', sans-serif;
-                                                        color:#222;
-                                                        font-size: 14px;
-                                                        text-align: center;
-                                                        font-weight: 600;
-                                                        outline: none;
-                                                        user-select: text;
-                                                    ">
-                                                    Forntend
-                                                </div>
-                                            </foreignObject>
-                                            <style>
-                                                #cube,#textCubic {
-                                                    transform-origin: 200px 200px;
-                                                    animation: rotate3D 12s linear infinite;
-                                                }
-                            
-                                                @keyframes rotate3D {
-                                                    0% {
-                                                        transform: rotateX(10deg) rotateY(10deg) scale(0.5);
-                                                    }
-                                                    25% {
-                                                        transform: rotateX(10deg) rotateY(10deg) scale(0.20);
-                                                    }
-                                                    50% {
-                                                        transform: rotateX(20deg) rotateY(25deg) scale(1.03);
-                                                    }
-                                                    75% {
-                                                        transform: rotateX(30deg) rotateY(-35deg) scale(1.1);
-                                                    }
-                                                    90%{
-                                                        transform: rotateX(45deg) rotateY(-90deg) scale(1.05);
-                                                    }
-                                                    100% {
-                                                        transform: rotateX(0deg) rotateY(0deg) scale(1.05);
-                                                        transition: all;
-                                                    }
-                                                }
-                                            </style>
-                                        </svg>
-                                    </div>
-                                    <div class="">
-                                        <span>
-                                            <svg id="connectionPloyLayer" class="absolute top-0 left-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
-                                                <g id="connectorPolyToSolidator">
-                                                    <path class="connectorPolyLine" fill="none" stroke-width="2"></path>
-                                                </g>
-                                            </svg>
-                                            <svg width="300" height="350" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" id="polygonSolidator">
-                                                <polygon id="poly" points="
-                                                    150,40
-                                                    253.923,95
-                                                    253.923,205
-                                                    150,260
-                                                    46.077,205
-                                                    46.077,95
-                                                    150,260
-                                                    46.077,205
-                                                    46.077,95
-                                                    150,40
-                                                    253.923,95
-                                                    253.923,205
-                                                " fill="none" stroke="#80808058" stroke-width="1"/>
-                        
-                                                <line id="line" x1="150" y1="40"    x2="150" y2="260" stroke="#80808058" stroke-width="1"/>
-                                                <line id="line" x1="253.923" y1="95" x2="46.077" y2="205" stroke="#80808058" stroke-width="1"/>
-                                                <line id="line" x1="253.923" y1="205" x2="46.077" y2="95"  stroke="#80808058" stroke-width="1"/>
-                                                
-                                                <foreignObject x="50" y="75" width="100" height="100">
-                                                    <div id="textCubic"
-                                                        contenteditable="false"
-                                                        style="
-                                                            font-family: 'Orbitron', sans-serif;
-                                                            color:#222;
-                                                            font-size: 18px;
-                                                            text-align: center;
-                                                            font-weight: 800;
-                                                            outline: none;
-                                                            user-select: text;
-                                                        ">
-                                                        Backend
-                                                    </div>
-                                                </foreignObject>
-                                                <style>
-                                                    #poly,#line {
-                                                        transform-origin: 100px 100px;
-                                                        animation: leftrotate3D 12s linear infinite;
-                                                    }
-                                
-                                                    @keyframes leftrotate3D {
-                                                        0% {
-                                                            transform: rotateX(0deg) rotateY(0deg) scale(0.5);
-                                                        }
-                                                        25% {
-                                                            transform: rotateX(10deg) rotateY(20deg) scale(1.2);
-                                                        }
-                                                        50% {
-                                                            transform: rotateX(20deg) rotateY(30deg) scale(1.4);
-                                                        }
-                                                        75% {
-                                                            transform: rotateX(30deg) rotateY(45deg) scale(0.65);
-                                                        }
-                                                        90%{
-                                                            transform: rotateX(45deg) rotateY(90deg) scale(0.55);
-                                                        }
-                                                        100% {
-                                                            transform: rotateX(0deg) rotateY(360deg) scale(1);
-                                                            transition: all;
-                                                        }
-                                                    }
-                                                </style>
-                                            </svg>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
                             <div class="mx-auto my-0">
                                 <div class="grid grid-col-1 lg:grid-cols-1 md:grid-cols-1 trnasform-3d bg-white">
                                     <div class="">
                                         <div class="slider-box px-0 py-0">
-                                            <div class="box h-20 w-237">
+                                            <div class="box h-100 w-230">
                                                 <div class="image-body service-image-skeletone relative hover:bg-[hsl(0,0%,98.4%,0.2)] transition duration-300 ease-in-out hover:opacity-100">
-                                                    <div class="text-part service__title__text__skeletone ps-0 pt-0">
+                                                    <div class="text-part service__title__text__skeletone p-50">
                                                         <b><h1 class="text-[20px]"></h1></b>
                                                         <b><p class="text-[20px]"></p></b>
                                                     </div>
@@ -1067,28 +1067,6 @@
                     </div>
                 </div>
             </div>
-            <div class="container">
-                <div id="right-bottom-carousel" class="relative w-full">
-                    <div class="sub__slider h-48">
-                        <div class="left-doted-skeletone">
-                            <div class="sub-scroll-slider-container transform-3d">
-                                <img src="./images/animal-backend.png" alt="Bottom Slide 1">
-                                <img src="./images/animal-medicine.png" alt="Bottom Slide 2">
-                                <img src="./images/ecommerce.png" alt="Bottom Slide 3">
-                                <img src="./images/animal-temp.png" alt="Bottom Slide 4">
-                                <img src="./images/supplier.png" alt="Bottom Slide 5">
-    
-                                <!-- Duplicate images for seamless loop -->
-                                <img src="./images/animal-backend.png" alt="Bottom Slide 1">
-                                <img src="./images/animal-medicine.png" alt="Bottom Slide 2">
-                                <img src="./images/ecommerce.png" alt="Bottom Slide 3">
-                                <img src="./images/animal-temp.png" alt="Bottom Slide 4">
-                                <img src="./images/supplier.png" alt="Bottom Slide 5">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </section>
         <!-- Service -->
         <section class="mx-3 py-5 mb-20" id="services">
@@ -1127,13 +1105,13 @@
                                         <button class="btn-v400 cursor-pointer inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                             Read more
                                             <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10" >
-                                            <path
-                                                stroke="currentColor"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                stroke-width="2"
-                                                d="M1 5h12m0 0L9 1m4 4L9 9"
-                                            />
+                                                <path
+                                                    stroke="currentColor"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    stroke-width="2"
+                                                    d="M1 5h12m0 0L9 1m4 4L9 9"
+                                                />
                                             </svg>
                                         </button>
                                     </div>
@@ -1230,6 +1208,28 @@
                             </svg>
                             </span>
                         </button>
+                    </div>
+                </div>
+                <div class="container">
+                    <div id="right-bottom-carousel" class="relative w-full">
+                        <div class="sub__slider h-48">
+                            <div class="left-doted-skeletone">
+                                <div class="sub-scroll-slider-container transform-3d">
+                                    <img class="weave-img" src="./images/animal-backend.png" alt="Bottom Slide 1">
+                                    <img class="weave-img" src="./images/animal-medicine.png" alt="Bottom Slide 2">
+                                    <img class="weave-img" src="./images/ecommerce.png" alt="Bottom Slide 3">
+                                    <img class="weave-img" src="./images/animal-temp.png" alt="Bottom Slide 4">
+                                    <img class="weave-img" src="./images/supplier.png" alt="Bottom Slide 5">
+        
+                                    <!-- Duplicate images for seamless loop -->
+                                    <img class="weave-img" src="./images/animal-backend.png" alt="Bottom Slide 1">
+                                    <img class="weave-img" src="./images/animal-medicine.png" alt="Bottom Slide 2">
+                                    <img class="weave-img" src="./images/ecommerce.png" alt="Bottom Slide 3">
+                                    <img class="weave-img" src="./images/animal-temp.png" alt="Bottom Slide 4">
+                                    <img class="weave-img" src="./images/supplier.png" alt="Bottom Slide 5">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="marble-cursor bg-radial-[at_50%_75%] transition-all duration-300 ease-out" id="marble-cursor-four"></div>

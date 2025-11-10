@@ -1,21 +1,21 @@
 export const ServicesData = [
     {
-        url: '',
+        url: './images/ecommerce.png',
         title: 'Industrial Equipment System',
         body: 'Forntend for Industrial Equipment E-Commerce Website.'
     },
     {
-        url: '',
+        url: './images/animal-temp.png',
         title: 'Animal Framing System',
         body: 'Forntend for Veterinary Medicine and Farming Equipment Website.'
     },
     {
-        url: '',
+        url: './images/animal-backend.png',
         title: 'Animal Medicine',
         body: 'Backend for Animal Medicine Management.'
     },
     {
-        url: '',
+        url: './images/supplier.png',
         title: 'Supplier Management',
         body: 'Backend for Supplier Management System.'
     }
