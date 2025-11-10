@@ -421,6 +421,19 @@
             0% { transform: translateY(-50vw); }
             100% { transform: translateY(50); }
         }
+        .sub-scroll-card-slider-container div {
+            display: grid;
+            gap: 20px;
+            animation: cardScroll 10s linear alternate-reverse infinite;
+        }
+        @keyframes cardScroll {
+            0% { transform: translateX(0) rotateY(0deg) scale(0); opacity: 0;}
+            50% { transform: translateX(-10px) rotateY(-45deg) scale(1); opacity: 0.8;}
+            100% { transform: translateX(20px) rotateY(90deg) rotateZ(180deg) scale(1.2);opacity: 1;}
+        }
+        .sub__slider:hover .sub-scroll-card-slider-container div{
+            animation-play-state: paused;
+        }
 
     </style>
 </head>
@@ -932,7 +945,7 @@
                         </blockquote>
                     </div>
                 </div>
-                <div class="flex flex-flow-row gap-8 mb-20">
+                <div class="flex flex-flow-row gap-14 mb-20">
                     <div class="col-span-8">
                         <div class="heading relative project lg:py-0 rounded-lg justify-evenly items-center">
                             <div class="mx-auto my-0">
@@ -1030,7 +1043,7 @@
             </div>
             <div class="container mb-20">
                 <div class="flex size-full justify-center items-center">
-                    <div class="project-slider relative block h-148 overflow-hidden rounded-2xl ring ring-gray-950/5 max-sm:h-100 dark:bg-gray-950 dark:ring-white/10">
+                    <div class="project-slider relative block h-148 overflow-hidden rounded-2xl ring ring-gray-950/5 max-sm:h-100 dark:bg-gray-950 dark:ring-white/10 bg-[linear-gradient(145deg,#80808019_50px,transparent_1px),linear-gradient(145deg,#80808019_20px,transparent_1px)] bg-[size:100px_100px] [mask-image:radial-gradient(ellipse_130%_130%_at_20%_20%,#000_80%,transparent_100%)] bg-blend-lighten animate-[rotatedGrid_6s_linear_infinite]">
                         <div class="size-430 shrink-0 scale-50 md:scale-75 lg:scale-100 dark:bg-white/5">
                             <div class="relative top-(--top,5%) right-(--right,54%) grid size-full origin-top-left rotate-x-55 rotate-y-0 -rotate-z-45 grid-cols-4 gap-8 transform-3d">
                                 <div class="flex flex-col gap-8 scroll-first-item-container" style="transform:translateY(750px);">
@@ -1089,7 +1102,42 @@
                 </div>
             </div>
             <div class="container relative service bg-[linear-gradient(145deg,#80808019_50px,transparent_1px),linear-gradient(145deg,#80808019_20px,transparent_1px)] bg-[size:100px_100px] [mask-image:radial-gradient(ellipse_130%_130%_at_20%_20%,#000_80%,transparent_100%)] rounded-sm bg-blend-lighten animate-[rotatedGrid_6s_linear_infinite]">
-                <div class="px-50 py-30">
+                <div class="container">
+                    <div id="right-bottom-carousel" class="relative w-full">
+                        <div class="sub__slider h-80">
+                            <div class="left-doted-skeletone">
+                                <div class="sub-scroll-card-slider-container flex flex-row gap-4 items-center transform-3d">
+                                    <div class="card w-full h-[250px] p-5 grid grid-col-1 items-center bg-white bg-[size:5px_5px] mask-size-[50%] shadow-sm border border-[rgba(0,128,255,0.1)] rounded-sm">
+                                        <h1 class="text-gray-800 font-bold text-md text-left">Landing Page</h1>
+                                        <span class="text-gray-600 text-sm font-semibold text-start">Implement landing page for any website.</span>
+                                        <img class="w-fit min-h-max rounded-sm object-cover" src="./images/landing-page.png" alt="landing-page">
+                                    </div>
+                                    <div class="card w-full h-[250px] p-5 grid grid-col-1 items-center bg-white bg-[size:5px_5px] mask-size-[50%] shadow-sm border border-[rgba(0,128,255,0.1)] rounded-sm">
+                                        <h1 class="text-gray-800 font-bold text-md text-left">Website Design</h1>
+                                        <span class="text-gray-600 text-sm font-semibold text-start">Website design for any device and responsive.</span>
+                                        <img class="w-fit min-h-max rounded-sm object-cover" src="./images/website-design.png" alt="website-design">
+                                    </div>
+                                    <div class="card w-full h-[250px] p-5 grid grid-col-1 items-center bg-white bg-[size:5px_5px] mask-size-[50%] shadow-sm border border-[rgba(0,128,255,0.1)] rounded-sm">
+                                        <h1 class="text-gray-800 font-bold text-md text-left">Backend Development</h1>
+                                        <span class="text-gray-600 font-semibold text-sm text-start">To build-up multi-authentication.</span>
+                                        <img class="w-fit min-h-max rounded-sm object-cover" src="./images/backend-development.jpg" alt="backend-development">
+                                    </div>
+                                    <div class="card w-full h-[250px] p-5 grid grid-col-1 items-center bg-white bg-[size:5px_5px] mask-size-[50%] shadow-sm border border-[rgba(0,128,255,0.1)] rounded-sm">
+                                        <h1 class="text-gray-800 font-bold text-md text-left">Web Site Responsive</h1>
+                                        <span class="text-gray-600 font-semibold text-sm text-start">Multi-device reponsive.</span>
+                                        <img class="w-fit min-h-max rounded-sm object-cover" src="./images/responsive-design.png" alt="database-design">
+                                    </div>
+                                    <div class="card w-full h-[250px] p-5 grid grid-col-1 items-center bg-white bg-[size:5px_5px] mask-size-[50%] shadow-sm border border-[rgba(0,128,255,0.1)] rounded-sm">
+                                        <h1 class="text-gray-800 font-bold text-md text-left">Templating</h1>
+                                        <span class="text-gray-600 font-semibold text-sm text-start">Theme implement templating.</span>
+                                        <img class="w-fit min-h-max rounded-sm object-cover" src="./images/templating.png" alt="theme-design">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-50 py-0 pb-30">
                     <div id="right-top-carousel" class="relative w-full transform-3d py-10" data-carousel="slide">
                         <div class="relative lg:h-[300px] overflow-hidden rounded-lg">
                             <!-- Slide 1 -->
@@ -1209,28 +1257,6 @@
                             </svg>
                             </span>
                         </button>
-                    </div>
-                </div>
-                <div class="container">
-                    <div id="right-bottom-carousel" class="relative w-full">
-                        <div class="sub__slider h-48">
-                            <div class="left-doted-skeletone">
-                                <div class="sub-scroll-slider-container transform-3d">
-                                    <img src="./images/animal-backend.png" alt="Bottom Slide 1">
-                                    <img src="./images/animal-medicine.png" alt="Bottom Slide 2">
-                                    <img src="./images/ecommerce.png" alt="Bottom Slide 3">
-                                    <img src="./images/animal-temp.png" alt="Bottom Slide 4">
-                                    <img src="./images/supplier.png" alt="Bottom Slide 5">
-        
-                                    <!-- Duplicate images for seamless loop -->
-                                    <img src="./images/animal-backend.png" alt="Bottom Slide 1">
-                                    <img src="./images/animal-medicine.png" alt="Bottom Slide 2">
-                                    <img src="./images/ecommerce.png" alt="Bottom Slide 3">
-                                    <img src="./images/animal-temp.png" alt="Bottom Slide 4">
-                                    <img src="./images/supplier.png" alt="Bottom Slide 5">
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <div class="marble-cursor bg-radial-[at_50%_75%] transition-all duration-300 ease-out" id="marble-cursor-four"></div>
