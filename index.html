@@ -62,19 +62,27 @@
             }
         }
         .text-paragraph{
-            animation: textup 8s linear infinite;
+            animation: textup 15s linear alternate-reverse infinite;
             transform: var(--about-transform);
         }
         @keyframes textup{
-            10%{
+            0%{
+                opacity: 0;
+            }
+            25%{
+                opacity: 0.2;
+            }
+            50%{
                 transform: var(--animation-positive);
                 transform: var(--animation-negative);
                 transition: var(--animation-transparent); 
+                opacity: 0.8;
             }
             100%{
                 transform: var(--animation-positive);
                 transform: var(--animation-negative);
                 transition: var(--animation-transparent2);
+                opacity: 1;
             }
         }
         a.btn-v400{
@@ -359,6 +367,60 @@
                 color: rgb(3, 112, 221);
             }
         }
+        /* [Scroll-image Slider] */
+        .sub__slider {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            border-radius: 8px;
+        }
+        .sub-scroll-slider-container {
+            display: flex;
+            gap: 20px;
+            animation: scroll 20s linear infinite;
+        }
+        .sub-scroll-slider-container img {
+            width: 25vw;
+            height: 200px;
+            object-fit: cover;
+            flex-shrink: 0;
+            border-radius: 0.5rem;
+        }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-150vw); }
+        }
+        .sub__slider:hover .sub-scroll-slider-container {
+            animation-play-state: paused;
+        }
+        .scroll-first-item-container {
+            animation: scroll_first_item 30s linear alternate-reverse infinite;
+        }
+        @keyframes scroll_first_item{
+            0% { transform: translateY(50); }
+            100% { transform: translateY(-50vw); }
+        }
+        .scroll-second-item-container {
+            animation: scroll_second_item 30s linear alternate-reverse infinite;
+        }
+        @keyframes scroll_second_item{
+            0% { transform: translateY(-50vw); }
+            100% { transform: translateY(50); }
+        }
+        .scroll-third-item-container {
+            animation: scroll_third_item 30s linear alternate-reverse infinite;
+        }
+        @keyframes scroll_third_item{
+            0% { transform: translateY(50); }
+            100% { transform: translateY(-50vw); }
+        }
+        .scroll-four-item-container {
+            animation: scroll_four_item 30s linear alternate-reverse infinite;
+        }
+        @keyframes scroll_four_item{
+            0% { transform: translateY(-50vw); }
+            100% { transform: translateY(50); }
+        }
 
     </style>
 </head>
@@ -385,20 +447,8 @@
                     </li>
                     <li class="cursor-pointer">
                         <span class="flex flex-col-reverse items-center justify-between group/child group-hover:[animation:pulse_1s]">
-                            <a type="button" href="#about_me" class="flex items-center justify-center text-lg font-semibold text-gray-700 transition duration-200 ease-in hover:scale-110 hover:text-gray-500 subpixel-antialiased">About</a>
-                            <span class="items-center justify-center min-w-[50px] h-[2px] transform-3d group-hover/child:[animation:moving_0.5s_linear] hidden group-hover/child:flex bg-neutral-300 rounded-full place-items-center absolute"></span>
-                        </span>
-                    </li>
-                    <li class="cursor-pointer">
-                        <span class="flex flex-col-reverse items-center justify-between group/child group-hover:[animation:pulse_1s]">
                             <a type="button" href="#skills" class="flex items-center justify-center text-lg font-semibold text-gray-700 transition duration-200 ease-in hover:scale-110 hover:text-gray-500 subpixel-antialiased">Skills</a>
                             <span class="items-center justify-center min-w-[40px] h-[2px] transform-3d group-hover/child:[animation:moving_0.5s_linear] hidden group-hover/child:flex bg-neutral-300 rounded-full place-items-center absolute"></span>
-                        </span>
-                    </li>
-                    <li class="cursor-pointer">
-                        <span class="flex flex-col-reverse items-center justify-between group/child group-hover:[animation:pulse_1s]">
-                            <a type="button" href="#qualification" class="flex items-center justify-center text-lg font-semibold text-gray-700 transition duration-200 ease-in hover:scale-110 hover:text-gray-500 subpixel-antialiased">Qualification</a>
-                            <span class="items-center justify-center min-w-[105px] h-[2px] transform-3d group-hover/child:[animation:moving_0.5s_linear] hidden group-hover/child:flex bg-neutral-300 rounded-full place-items-center absolute"></span>
                         </span>
                     </li>
                     <li class="cursor-pointer">
@@ -415,6 +465,18 @@
                     </li>
                     <li class="cursor-pointer">
                         <span class="flex flex-col-reverse items-center justify-between group/child group-hover:[animation:pulse_1s]">
+                            <a type="button" href="#about_me" class="flex items-center justify-center text-lg font-semibold text-gray-700 transition duration-200 ease-in hover:scale-110 hover:text-gray-500 subpixel-antialiased">About</a>
+                            <span class="items-center justify-center min-w-[50px] h-[2px] transform-3d group-hover/child:[animation:moving_0.5s_linear] hidden group-hover/child:flex bg-neutral-300 rounded-full place-items-center absolute"></span>
+                        </span>
+                    </li>
+                    <li class="cursor-pointer">
+                        <span class="flex flex-col-reverse items-center justify-between group/child group-hover:[animation:pulse_1s]">
+                            <a type="button" href="#qualification" class="flex items-center justify-center text-lg font-semibold text-gray-700 transition duration-200 ease-in hover:scale-110 hover:text-gray-500 subpixel-antialiased">Qualification</a>
+                            <span class="items-center justify-center min-w-[105px] h-[2px] transform-3d group-hover/child:[animation:moving_0.5s_linear] hidden group-hover/child:flex bg-neutral-300 rounded-full place-items-center absolute"></span>
+                        </span>
+                    </li>
+                    <li class="cursor-pointer">
+                        <span class="flex flex-col-reverse items-center justify-between group/child group-hover:[animation:pulse_1s]">
                             <a type="button" href="#contact" class="flex items-center justify-center text-lg font-semibold text-gray-700 transition duration-200 ease-in hover:scale-110 hover:text-gray-500 subpixel-antialiased">Contact</a>
                             <span class="items-center justify-center min-w-[75px] h-[2px] transform-3d group-hover/child:[animation:moving_0.5s_linear] hidden group-hover/child:flex bg-neutral-300 rounded-full place-items-center absolute"></span>
                         </span>
@@ -423,7 +485,7 @@
             </div>
         </nav>
     </header>
-    <main class="px-5 sm:px-5 md:px-5 lg:px-10 xl:px-15 2xl:px-20 w-full h-auto pb-30 bg-[linear-gradient(to_right,#80808015_1px,transparent_1px),linear-gradient(to_bottom,#80808015_1px,transparent_1px)] hover:bg-[size:40px_40px] bg-[size:40px_40px] mask-size-[50%] animate-[rotatedGrid_6s_linear_infinite]">
+    <main class="px-5 sm:px-5 md:px-5 lg:px-10 xl:px-15 2xl:px-20 w-full h-auto pb-5 bg-[linear-gradient(to_right,#80808015_1px,transparent_1px),linear-gradient(to_bottom,#80808015_1px,transparent_1px)] hover:bg-[size:40px_40px] bg-[size:40px_40px] mask-size-[50%] animate-[rotatedGrid_6s_linear_infinite]">
         <!-- Hero-section -->
         <section class="mx-5 mt-0 pt-20 sm:pt-5 lg:pt-20 md:pt-10 xl:pt-30 2xl:pt-40 mb-30" id="home">
             <div class="flex flex-col sm:flex-col md:flex-col lg:flex-row gap-8 pb-30">
@@ -431,15 +493,15 @@
                     <section class="container card w-full flex flex-col-reverse gap-8 sm:flex-col lg:flex-row md:flex-row bg-white shadow-md border border-[rgba(0,128,255,0.1)] group rounded-lg p-s dark:bg-gray-800 dark:border-gray-700">
                         <div class="addressing px-0 sm:px-0 md:px-5 lg:px-5 xl:px-10 2xl:px-15">
                             <h1 class="font-bold text-gray-400 group-hover:text-gray-500 text-4xl pt-10 capitalize subpixel-antialiased transition duration-700 ease-in-out translate-x-0 translate-y-0 group-hover:-translate-y-[1rem] group-hover:ring-opacity-100"> Bishwajit Sarker </h1>
-                            <div class="description py-2 font-semibold text-gray-600 text-3xl subpixel-antialiased transition duration-700 opacity-0 ease-in-out -translate-x-[10rem] group-hover:-translate-x-[0rem] group-hover:opacity-100">
+                            <div class="description py-2 font-semibold text-gray-800 text-3xl subpixel-antialiased transition duration-700 opacity-0 ease-in-out -translate-x-[10rem] group-hover:-translate-x-[0rem] group-hover:opacity-100">
                                 I'm a <span class="font-black text-gray-600 text-2xl subpixel-antialiased"><span class="text-lime-600">backend</span> as well as <span class="text-violet-600">forntend <span class="text-[18px] font-semibold italic text-gray-700"> Developer</span></span></span>
                             </div>
-                            <p class="text-paragraph py-1 px-3 text-lg font-semibold text-gray-900 text-justify first-line:tracking-widest first-letter:text-7xl first-letter:font-bold first-letter:text-gray-400 dark:first-letter:text-gray-100 first-letter:me-3 first-letter:float-start">Detail-oriented Web Developer and enthusiastic with strong knowledge of HTML, CSS, JavaScript, PHP (Laravel) and (React Js). Passionate about building responsive, user-friendly applications and eager to apply my skills in a professional environment.<span class="text-violet-600"> My goal</span> I aim to be a highly proficient backend and frontend developer.</p>
+                            <p class="text-paragraph py-1 px-3 text-md font-bold text-gray-800 text-justify first-line:tracking-widest first-letter:text-7xl first-letter:font-bold first-letter:text-gray-400 dark:first-letter:text-gray-100 first-letter:me-3 first-letter:float-start">Detail-oriented Web Developer and enthusiastic with strong knowledge of HTML, CSS, JavaScript, PHP (Laravel) and (React Js). Passionate about building responsive, user-friendly applications and eager to apply my skills in a professional environment.<span class="text-violet-600"> My goal</span> I aim to be a highly proficient backend and frontend developer.</p>
                         </div>
-                        <div class="hero-section z-10 w-[300px] h-auto rounded-xl relative bg-blend-lighten bg-[linear-gradient(to_right,#80808025_1px,transparent_1px),linear-gradient(to_bottom,#80808025_1px,transparent_1px)] bg-[size:5px_5px] mask-size-[50%] hover:bg-[size:10px_10px] hover:animate-[moveGrid_1s_linear_infinite]">
+                        <div class="hero-section z-10 w-full p-5 h-auto rounded-xl relative bg-blend-lighten bg-[linear-gradient(to_right,#80808025_1px,transparent_1px),linear-gradient(to_bottom,#80808025_1px,transparent_1px)] bg-[size:5px_5px] mask-size-[50%] hover:bg-[size:10px_10px] hover:animate-[moveGrid_1s_linear_infinite]">
                             <div class="flex justify-center sm:flex-none lg:flex lg:justify-center lg:py-10 md:flex md:justify-center md:py-10">
                                 <div class="rounded-full lg:flex lg:justify-center">
-                                    <img class="weave-img w-[230px] h-[230px] rounded-full shrink-0 overflow-hidden z-10" src="./images/444.jpg" alt="user-image">
+                                    <img class="weave-img w-[200px] h-[200px] rounded-full shrink-0 overflow-hidden z-10" src="./images/444.jpg" alt="user-image">
                                 </div>
                             </div>
                             <div class="marble-cursor bg-radial-[at_50%_75%] transition-all duration-300 ease-out" id="marble-cursor-one"></div>
@@ -463,7 +525,7 @@
                                     <li><i class="fa-solid fa-envelope"></i> bishwajitsarkar99@gmail.com</li>
                                 </ul>
                             </div>
-                            <ul class="mt-5">  
+                            <ul class="mt-9">  
                                 <li class="flex font-semibold text-gray-700 gap-2 text-sm items-center">
                                     <a type="button" href="https://github.com/bishwajitsarkar99" class="btn-v400 button-shadow text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-md rounded-full text-xs px-5 p-0.5 text-center cursor-pointer" style="line-height: 1.3;">Git Hub Profile</a>
                                 </li>
@@ -712,7 +774,7 @@
             </div>
         </section>
         <!-- Project -->
-        <section class="mx-3 mb-80" id="projects">
+        <section class="mx-3 mb-30" id="projects">
             <div class="container">
                 <div class="mx-0 py-1 mb-10">
                     <div class="h-25 bounce-text justify-center items-center bg-[linear-gradient(145deg,#80808058_0px,transparent_1px),linear-gradient(180deg,#80808058_0px,transparent_1px)] bg-[size:5px_5px] [mask-image:radial-gradient(ellipse_100%_100%_at_20%_20%,#000_80%,transparent_100%)]">
@@ -731,7 +793,6 @@
                     <div class="col-span-8">
                         <div class="heading relative project lg:py-0 rounded-lg justify-evenly items-center">
                             <div class="w-full h-[0px]">
-                                <!-- <img class="w-full h-[600px] rounded-lg" src="./images/4402130.jpg" alt="bg-image"> -->
                                 <div class="grid grid-col-2 pt-30 sm:grid-flow-col lg:grid-flow-col md:grid-flow-row gap-8 align-middle">
                                     <div class="container">
                                         <svg id="connectionLayer" class="absolute top-0 left-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
@@ -739,11 +800,11 @@
                                                 <path class="connectorLine" fill="none" stroke-width="2"></path>
                                             </g>
                                         </svg>
-                                        <svg viewBox="0 0 200 200" width="200" height="250" storkeLinecap="round" strokeLinejoin="round" id="connectorSolidator">
+                                        <svg viewBox="0 0 200 200" width="250" height="250" storkeLinecap="round" strokeLinejoin="round" id="connectorSolidator">
                                             <defs>
                                                 <linearGradient id="cube-edge" x1="0%" y1="0%" x2="100%" y2="100%">
-                                                    <stop offset="0%" stop-color="rgba(0,128,255,0.6)" stop-opacity="0.8"/>
-                                                    <stop offset="100%" stop-color="rgba(0,128,255,0.6)" stop-opacity="0.8"/>
+                                                    <stop offset="0%" stop-color="#80808058" stop-opacity="0.8"/>
+                                                    <stop offset="100%" stop-color="#80808058" stop-opacity="0.8"/>
                                                 </linearGradient>
                                             </defs>
                                             <g id="cube" stroke="url(#cube-edge)" stroke-width="1" fill="none">
@@ -766,32 +827,33 @@
                                                         outline: none;
                                                         user-select: text;
                                                     ">
+                                                    Forntend
                                                 </div>
                                             </foreignObject>
                                             <style>
                                                 #cube,#textCubic {
-                                                    transform-origin: 400px 400px;
-                                                    animation: rotate3D 10s linear infinite;
+                                                    transform-origin: 200px 200px;
+                                                    animation: rotate3D 12s linear infinite;
                                                 }
                             
                                                 @keyframes rotate3D {
                                                     0% {
-                                                        transform: rotateX(10deg) rotateY(0deg) scale(0.5);
+                                                        transform: rotateX(10deg) rotateY(10deg) scale(0.5);
                                                     }
                                                     25% {
-                                                        transform: rotateX(10deg) rotateY(20deg) scale(0.75);
+                                                        transform: rotateX(10deg) rotateY(10deg) scale(0.20);
                                                     }
                                                     50% {
-                                                        transform: rotateX(20deg) rotateY(-25deg) scale(1);
+                                                        transform: rotateX(20deg) rotateY(25deg) scale(1.03);
                                                     }
                                                     75% {
-                                                        transform: rotateX(30deg) rotateY(35deg) scale(1.25);
+                                                        transform: rotateX(30deg) rotateY(-35deg) scale(1.1);
                                                     }
                                                     90%{
-                                                        transform: rotateX(-45deg) rotateY(90deg) scale(1.5);
+                                                        transform: rotateX(45deg) rotateY(-90deg) scale(1.05);
                                                     }
                                                     100% {
-                                                        transform: rotateX(0deg) rotateY(0deg) scale(1.75);
+                                                        transform: rotateX(0deg) rotateY(0deg) scale(1.05);
                                                         transition: all;
                                                     }
                                                 }
@@ -805,7 +867,7 @@
                                                     <path class="connectorPolyLine" fill="none" stroke-width="2"></path>
                                                 </g>
                                             </svg>
-                                            <svg width="225" height="225" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" id="polygonSolidator">
+                                            <svg width="300" height="350" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" id="polygonSolidator">
                                                 <polygon id="poly" points="
                                                     150,40
                                                     253.923,95
@@ -819,36 +881,51 @@
                                                     150,40
                                                     253.923,95
                                                     253.923,205
-                                                " fill="none" stroke="rgba(0,128,255,0.6)" stroke-width="2"/>
+                                                " fill="none" stroke="#80808058" stroke-width="1"/>
                         
-                                                <line id="line" x1="150" y1="40"    x2="150" y2="260" stroke="rgba(0,128,255,0.6)" stroke-width="2"/>
-                                                <line id="line" x1="253.923" y1="95" x2="46.077" y2="205" stroke="rgba(0,128,255,0.6)" stroke-width="2"/>
-                                                <line id="line" x1="253.923" y1="205" x2="46.077" y2="95"  stroke="rgba(0,128,255,0.6)" stroke-width="2"/>
-                        
+                                                <line id="line" x1="150" y1="40"    x2="150" y2="260" stroke="#80808058" stroke-width="1"/>
+                                                <line id="line" x1="253.923" y1="95" x2="46.077" y2="205" stroke="#80808058" stroke-width="1"/>
+                                                <line id="line" x1="253.923" y1="205" x2="46.077" y2="95"  stroke="#80808058" stroke-width="1"/>
+                                                
+                                                <foreignObject x="50" y="75" width="100" height="100">
+                                                    <div id="textCubic"
+                                                        contenteditable="false"
+                                                        style="
+                                                            font-family: 'Orbitron', sans-serif;
+                                                            color:#222;
+                                                            font-size: 18px;
+                                                            text-align: center;
+                                                            font-weight: 800;
+                                                            outline: none;
+                                                            user-select: text;
+                                                        ">
+                                                        Backend
+                                                    </div>
+                                                </foreignObject>
                                                 <style>
                                                     #poly,#line {
-                                                        transform-origin: 200px 200px;
+                                                        transform-origin: 100px 100px;
                                                         animation: leftrotate3D 12s linear infinite;
                                                     }
                                 
                                                     @keyframes leftrotate3D {
                                                         0% {
-                                                            transform: rotateX(0deg) rotateY(0deg) scale(1.2);
+                                                            transform: rotateX(0deg) rotateY(0deg) scale(0.5);
                                                         }
                                                         25% {
-                                                            transform: rotateX(10deg) rotateY(20deg) scale(1.05);
+                                                            transform: rotateX(10deg) rotateY(20deg) scale(1.2);
                                                         }
                                                         50% {
-                                                            transform: rotateX(20deg) rotateY(30deg) scale(1);
+                                                            transform: rotateX(20deg) rotateY(30deg) scale(1.4);
                                                         }
                                                         75% {
-                                                            transform: rotateX(30deg) rotateY(45deg) scale(0.95);
+                                                            transform: rotateX(30deg) rotateY(45deg) scale(0.65);
                                                         }
                                                         90%{
-                                                            transform: rotateX(45deg) rotateY(90deg) scale(0.85);
+                                                            transform: rotateX(45deg) rotateY(90deg) scale(0.55);
                                                         }
                                                         100% {
-                                                            transform: rotateX(0deg) rotateY(360deg) scale(1.01);
+                                                            transform: rotateX(0deg) rotateY(360deg) scale(1);
                                                             transition: all;
                                                         }
                                                     }
@@ -865,8 +942,8 @@
                                             <div class="box h-20 w-237">
                                                 <div class="image-body service-image-skeletone relative hover:bg-[hsl(0,0%,98.4%,0.2)] transition duration-300 ease-in-out hover:opacity-100">
                                                     <div class="text-part service__title__text__skeletone ps-0 pt-0">
-                                                        <b><h1 class="text-[30px]"></h1></b>
-                                                        <b><p class="text-[25px]"></p></b>
+                                                        <b><h1 class="text-[20px]"></h1></b>
+                                                        <b><p class="text-[20px]"></p></b>
                                                     </div>
                                                     <div class="carousel-button"></div>
                                                 </div>
@@ -946,6 +1023,67 @@
                                         <a type="button" href="https://github.com/bishwajitsarkar99/supplier-bussiness-management-system/tree/master" class="btn-v400 button-shadow text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-md rounded-full text-xs px-5 p-0.5 text-center cursor-pointer" style="line-height: 1.3;">Git Hub Code Link</a>
                                     </li>
                                 </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container mb-20">
+                <div class="flex size-full justify-center items-center">
+                    <div class="block h-148 overflow-hidden rounded-2xl ring ring-gray-950/5 max-sm:h-100 dark:bg-gray-950 dark:ring-white/10">
+                        <div class="size-430 shrink-0 scale-50 md:scale-75 lg:scale-100 dark:bg-white/5">
+                            <div class="relative top-(--top,5%) right-(--right,54%) grid size-full origin-top-left rotate-x-55 rotate-y-0 -rotate-z-45 grid-cols-4 gap-8 transform-3d">
+                                <div class="flex flex-col gap-8 scroll-first-item-container" style="transform:translateY(750px);">
+                                    <img class="aspect-970/580 ring ring-gray-950/5 dark:hidden" width="970" height="580" src="./images/animal-backend.png" alt="Bottom Slide 1">
+                                    <img class="aspect-970/580 ring ring-gray-950/5 dark:hidden" width="971" height="582" src="./images/animal-medicine.png" alt="Bottom Slide 2">
+                                    <img class="aspect-970/580 ring ring-gray-950/5 dark:hidden" width="970" height="508" src="./images/ecommerce.png" alt="Bottom Slide 3">
+                                    <img class="aspect-970/580 ring ring-gray-950/5 dark:hidden" width="971" height="920" src="./images/animal.png" alt="Bottom Slide 4">
+                                    <img class="aspect-970/580 ring ring-gray-950/5 dark:hidden" width="970" height="508" src="./images/supplier.png" alt="Bottom Slide 5">
+                                </div>
+                                <div class="flex flex-col gap-8 scroll-second-item-container" style="transform:translateY(750px);">
+                                    <img class="aspect-970/580 ring ring-gray-950/5 dark:hidden" width="970" height="580" src="./images/animal-backend.png" alt="Bottom Slide 1">
+                                    <img class="aspect-970/580 ring ring-gray-950/5 dark:hidden" width="971" height="582" src="./images/animal-medicine.png" alt="Bottom Slide 2">
+                                    <img class="aspect-970/580 ring ring-gray-950/5 dark:hidden" width="970" height="508" src="./images/ecommerce.png" alt="Bottom Slide 3">
+                                    <img class="aspect-970/580 ring ring-gray-950/5 dark:hidden" width="971" height="920" src="./images/animal.png" alt="Bottom Slide 4">
+                                    <img class="aspect-970/580 ring ring-gray-950/5 dark:hidden" width="970" height="508" src="./images/supplier.png" alt="Bottom Slide 5">
+    
+                                </div>
+                                <div class="flex flex-col gap-8 scroll-third-item-container" style="transform:translateY(750px);">
+                                    <img class="aspect-970/580 ring ring-gray-950/5 dark:hidden" width="970" height="580" src="./images/animal-backend.png" alt="Bottom Slide 1">
+                                    <img class="aspect-970/580 ring ring-gray-950/5 dark:hidden" width="971" height="582" src="./images/animal-medicine.png" alt="Bottom Slide 2">
+                                    <img class="aspect-970/580 ring ring-gray-950/5 dark:hidden" width="970" height="508" src="./images/ecommerce.png" alt="Bottom Slide 3">
+                                    <img class="aspect-970/580 ring ring-gray-950/5 dark:hidden" width="971" height="920" src="./images/animal.png" alt="Bottom Slide 4">
+                                    <img class="aspect-970/580 ring ring-gray-950/5 dark:hidden" width="970" height="508" src="./images/supplier.png" alt="Bottom Slide 5">
+                                </div>
+                                <div class="flex flex-col gap-8 scroll-four-item-container" style="transform:translateY(1400px);">
+                                    <img class="aspect-970/580 ring ring-gray-950/5 dark:hidden" width="970" height="580" src="./images/animal-backend.png" alt="Bottom Slide 1">
+                                    <img class="aspect-970/580 ring ring-gray-950/5 dark:hidden" width="971" height="582" src="./images/animal-medicine.png" alt="Bottom Slide 2">
+                                    <img class="aspect-970/580 ring ring-gray-950/5 dark:hidden" width="970" height="508" src="./images/ecommerce.png" alt="Bottom Slide 3">
+                                    <img class="aspect-970/580 ring ring-gray-950/5 dark:hidden" width="971" height="920" src="./images/animal.png" alt="Bottom Slide 4">
+                                    <img class="aspect-970/580 ring ring-gray-950/5 dark:hidden" width="970" height="508" src="./images/supplier.png" alt="Bottom Slide 5">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div id="right-bottom-carousel" class="relative w-full">
+                    <div class="sub__slider h-48">
+                        <div class="left-doted-skeletone">
+                            <div class="sub-scroll-slider-container transform-3d">
+                                <img src="./images/animal-backend.png" alt="Bottom Slide 1">
+                                <img src="./images/animal-medicine.png" alt="Bottom Slide 2">
+                                <img src="./images/ecommerce.png" alt="Bottom Slide 3">
+                                <img src="./images/animal.png" alt="Bottom Slide 4">
+                                <img src="./images/supplier.png" alt="Bottom Slide 5">
+    
+                                <!-- Duplicate images for seamless loop -->
+                                <img src="./images/animal-backend.png" alt="Bottom Slide 1">
+                                <img src="./images/animal-medicine.png" alt="Bottom Slide 2">
+                                <img src="./images/ecommerce.png" alt="Bottom Slide 3">
+                                <img src="./images/animal.png" alt="Bottom Slide 4">
+                                <img src="./images/supplier.png" alt="Bottom Slide 5">
                             </div>
                         </div>
                     </div>
@@ -1254,7 +1392,7 @@
                         </blockquote>
                     </div>
                 </div>
-                <div class="mx-0 my-0 gap-0 lg:flex sm:flex-none sm:grid lg:justify-between sm:justify-normal">
+                <div class="mx-0 my-0 gap-0 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 md:gap-8 lg:gap-50">
                     <div class="py-0 lg:py-30 sm:py-0 items-center align-baseline text-justify">
                         <span class='text-gray-700'>
                             <b class="subpixel-antialiased text-justify sm:text-justify md:text-justify lg:text-justify xl:text-justify 2xl:text-justify">If you want to know something or you have any suggestion then please mail me. Thank You.</b>
